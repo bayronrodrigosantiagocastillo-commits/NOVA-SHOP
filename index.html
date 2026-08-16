@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA SHOP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <!-- ENCABEZADO -->
+    <header>
+
+        <div>
+            <h1>NOVA SHOP</h1>
+        </div>
+
+        <div>
+            <input 
+                type="text" 
+                placeholder="¿Qué estás buscando?"
+            >
+            <button>🔍</button>
+        </div>
+
+        <div>
+            <button>👤 Cuenta</button>
+            <button>🛒 Carrito (<span id="cart-count">0</span>)</button>
+        </div>
+
+    </header>
+
+
+    <!-- MENÚ -->
+    <nav>
+
+        <a href="#">Inicio</a>
+        <a href="#">Mujer</a>
+        <a href="#">Hombre</a>
+        <a href="#">Lentes</a>
+        <a href="#">Fundas</a>
+        <a href="#">Accesorios</a>
+        <a href="#">Ofertas 🔥</a>
+
+    </nav>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+    <!-- PRESENTACIÓN -->
+    <section class="hero">
+
+        <h2>Todo lo que buscas, en un solo lugar</h2>
+
+        <p>
+            Moda, accesorios, tecnología y mucho más.
+        </p>
+
+        <button class="hero-button">
+            Comprar ahora
+        </button>
+
+    </section>
+
+
+    <!-- CATEGORÍAS -->
+    <section class="categories">
+
+        <h2>Explora nuestras categorías</h2>
+
+        <div class="category-container">
+
+            <div class="category">
+                <div class="category-icon">👕</div>
+                <h3>Prendas</h3>
+                <p>Moda para todos los estilos</p>
+            </div>
+
+            <div class="category">
+                <div class="category-icon">🕶️</div>
+                <h3>Lentes</h3>
+                <p>Encuentra tu estilo</p>
+            </div>
+
+            <div class="category">
+                <div class="category-icon">📱</div>
+                <h3>Fundas</h3>
+                <p>Protege tu celular</p>
+            </div>
+
+            <div class="category">
+                <div class="category-icon">💍</div>
+                <h3>Accesorios</h3>
+                <p>Detalles que marcan la diferencia</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTOS -->
+    <section class="products">
+
+        <h2>Productos destacados</h2>
+
+        <div class="product-container">
+
+            <div class="product-card">
+
+                <div class="product-image">
+    <img src="images/lentes.jpg" alt="Lentes Urban Black">
+</div>
+
+                <h3>Lentes Urban Black</h3>
+
+                <p class="price">
+                    S/ 29.90
+                </p>
+
+                <button class="add-to-cart" data-name="Lentes Urban Black" data-price="29.90">
+    Añadir al carrito
+</button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+    <img src="images/polo.jpg" alt="Polo Oversize Basic">
+</div>
+
+                <h3>Polo Oversize Basic</h3>
+
+                <p class="price">
+                    S/ 39.90
+                </p>
+
+                <button class="add-to-cart" data-name="Polo Oversize Basic" data-price="39.90">
+    Añadir al carrito
+</button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+    <img src="images/funda.jpg" alt="Funda iPhone 15 Pro">
+</div>
+
+                <h3>Funda iPhone 15 Pro</h3>
+
+                <p class="price">
+                    S/ 19.90
+                </p>
+
+                <button class="add-to-cart" data-name="Funda iPhone 15 Pro" data-price="19.90">
+    Añadir al carrito
+</button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+    <img src="images/collar.jpg" alt="Collar Minimal">
+</div>
+
+                <h3>Collar Minimal</h3>
+
+                <p class="price">
+                    S/ 15.90
+                </p>
+
+                <button class="add-to-cart" data-name="Collar Minimal" data-price="15.90">
+    Añadir al carrito
+</button>
+
+            </div>
+
+        </div>
+
+    </section>
+    
+<!-- MODAL DEL CARRITO -->
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+        <span id="close-cart" class="close-btn">&times;</span>
+        <h2>Tu Carrito</h2>
+        <ul id="cart-items" class="cart-items-list">
+            <!-- Aquí aparecerán los productos cargados por JS -->
+        </ul>
+        <div class="cart-total">
+            <h3>Total: S/ <span id="cart-total-price">0.00</span></h3>
+        </div>
+        <button id="checkout-btn" class="checkout-btn">Pagar por WhatsApp</button>
+    </div>
+</div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
