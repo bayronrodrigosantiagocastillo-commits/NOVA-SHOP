@@ -83,3 +83,28 @@ botonWhatsApp.addEventListener('click', () => {
     const url = `https://api.whatsapp.com/send?phone=${NUMERO_TELEFONO}&text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
 });
+const searchInput = document.getElementById('search-input');
+const categorySelect = document.getElementById('category-select');
+const productCards = document.querySelectorAll('.product-card');
+
+function filtrarProductos() {
+    const busqueda = searchInput.value.toLowerCase();
+    const categoria = categorySelect.value;
+
+    productCards.forEach(card => {
+        const nombre = card.querySelector('h3').textContent.toLowerCase();
+        const categoriaCard = card.getAttribute('data-category');
+
+        const coincideNombre = nombre.includes(busqueda);
+        const coincideCategoria = categoria === 'todos' || categoriaCard === categoria;
+
+        if (coincideNombre && coincideCategoria) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+searchInput.addEventListener('input', filtrarProductos);
+categorySelect.addEventListener('change', filtrarProductos);
