@@ -1,3 +1,6 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 * {
     margin: 0;
     padding: 0;
@@ -417,7 +420,7 @@ body {
    ========================================== */
 
 /* 1. Celulares (Android e iOS - Pantallas hasta 576px) */
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
     .filters-section {
         flex-direction: column;
         width: 90%;
@@ -430,7 +433,7 @@ body {
     }
 
     .products-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móvil para mejor aprovechamiento */
+        grid-template-columns: repeat(2, 1fr) !important;
         gap: 12px;
         padding: 0 10px;
     }
